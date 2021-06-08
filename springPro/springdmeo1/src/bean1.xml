@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    &lt;!&ndash;基于xml方式创建对象默认使用无参构造>>-->
+<!--    <!-this is annotions&ndash;&gt;-->
+<!--    &lt;!&ndash;bean id="user" class="com.rounie.spring5.User"></bean>-->
+
+<!--    DI使用setter方法注入-->
+<!--     向属性里面注入null值-->
+<!--    注入特殊符号-->
+        <bean id="book" class="com.rounie.spring5.Books">
+            <property name="price" value="30"></property>
+            <property name="name">
+                <value><![CDATA[<<开放社会及其敌人>>]]></value>
+            </property>
+            <property name="author">
+                <null></null>
+            </property>
+        </bean>
+
+
+<!--p注入：简化setter注入方式-->
+<!--    <bean id="book" class="com.rounie.spring5.Books" p:name="女儿红茶" p:price="100"></bean>-->
+
+<!--    <!-使用有参构造注入&ndash;&gt;-->
+<!--    <bean id="orders" class="com.rounie.spring5.Orders">-->
+<!--        <constructor-arg name="sname" value="rounie"></constructor-arg>-->
+<!--        <constructor-arg name="address" value="China"></constructor-arg>-->
+<!--    </bean>-->
+
+
+
+</beans>

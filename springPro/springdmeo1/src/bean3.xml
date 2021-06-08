@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--        <bean id="dept" class="com.rounie.spring5.bean.Dept"></bean>-->
+
+
+<!--    <bean id="emp" class="com.rounie.spring5.bean.Emp">-->
+<!--        <property name="ename" value="luck"></property>-->
+<!--        <property name="gender" value="fiilmale"></property>-->
+<!--        <property name="dept">-->
+<!--            <bean id="dept" class="com.rounie.spring5.bean.Dept">-->
+<!--                <property name="dname" value="安保部"></property>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+
+    <bean id="emp" class="com.rounie.spring5.bean.Emp">
+        <property name="ename" value="rounei"></property>
+        <property name="gender" value="male"></property>
+        <!--级联赋值            -->
+        <property name="dept" ref="dept"></property>
+        <property name="dept.dname" value="公共管理"></property>
+    </bean>
+
+    <bean id="dept" class="com.rounie.spring5.bean.Dept">
+        <property name="dname" value="技术部"></property>
+    </bean>
+
+
+</beans>

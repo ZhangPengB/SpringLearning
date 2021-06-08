@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--        创建useDao对象-->
+    <bean id="useDaoInterface" class="dao.UseDaoInterface"></bean>
+
+    <!--创建useService对象-->
+    <bean id="userService" class="service.UserService">
+        <!--name 中为属性名称，ref标签表示引用的对象-->
+        <property name="usedao" ref="useDaoInterface"></property>
+    </bean>
+
+
+
+</beans>
